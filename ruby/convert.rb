@@ -1,9 +1,9 @@
 
 def to_base_2(number)
 
-  converted = []
+  max_decimal_place = Math.log2(number).ceil
 
-  (0..4).reverse_each do |decimal_place|
+  converted = (0..max_decimal_place).reverse_each.map do |decimal_place|
     bit = 0
 
     if number >= 2**decimal_place
@@ -11,8 +11,8 @@ def to_base_2(number)
       number -= 2**decimal_place
     end
 
-    converted << bit
+    bit
   end
 
-  return converted
+  converted.join
 end
