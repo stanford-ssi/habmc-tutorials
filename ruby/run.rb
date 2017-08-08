@@ -5,7 +5,6 @@ def greet(name)
   puts "Hi #{name}! Welcome to Dudley's Pig Emporkium"
 end
 
-puts to_base_2(4)
-puts to_base_2(16)
-puts to_base_2(31)
-puts to_base_2(32)
+puts Converter.new(4).to_base(2)
+puts Converter.new(15).to_base(16)
+puts Converter.new(123).to_base(10)
