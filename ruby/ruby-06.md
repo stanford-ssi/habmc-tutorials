@@ -1,10 +1,119 @@
+## Testing, testing
 
-require_relative 'convert'
+When something goes wrong with the algorithm, Dudley wants to know about it.
+The solution is automated tests: a series of inputs and outputs that we know are correct.
+Ruby has lots of great testing frameworks like rspec, but today we'll be making our own as an excuse to learn a tiny bit more about arrays and hashes.
 
-def greet(name)
-  puts "Hi #{name}! Welcome to Dudley's Pig Emporkium"
+For our testing suite, we want to store an array of test cases.
+Each test case will have a number, a base it's converting to, and the expected output.
+Running the test will be as simple as looping over the test cases and comparing the real output to what we expected.
+Now, we could make a whole new class called test case, but in this case that's overkill.
+It's much cleaner and easier if we just use hashes.
+In ruby, we can declare a new hash like so:
+```ruby
+test_case = {
+  number: 4,
+  base: 2,
+  expected: '100'
+}
+```
+The hash is a key-value lookup table like a dictionary, where the keys and the values can be whatever you want.
+In this case, the key `number` is associated with the value `4`, the key `expected` is associated with the value `'100'`, etc.
+You can read and write from it using brackets (this is a great thing to stick into `irb` to test out)
+```ruby
+hash = {}
+
+hash['hi'] = 'there'
+hash['hi'] # => 'there'
+
+hash[8] = 'eight'
+hash[8] # => 'eight'
+
+hash['false'] = false
+
+puts hash.inspect
+```
+
+
+## Strings versus symbols
+If you try running the following, it will print nil -- that is, it can't find the key number in the hash.
+How do we read the value back out?
+```ruby
+test_case = {
+  number: 4,
+  base: 2,
+  expected: '100'
+}
+
+test_case['number'] # => nil 
+```
+
+This is the difference between strings and symbols.
+A symbol is an immutable string; an ordinary string like `'a'` can have `'b'` added onto the end of it in the same structure, but the symbol `:a` is much more like the number `4`.
+Sure, you can create a new symbol `:ab`, just like you can create a new number `41`, but it's a different symbol than before.
+This lets the computer do a lot of fun things under the hood and makes them better hash keys, which is why ruby makes them the default when declaring a hash literal.
+
+You can declare a hash with the `:` symbol, or `:''` if it has spaces in it.
+```ruby
+this_is_a_symbol = :hi
+here_is_another = :'life in the city'
+```
+
+Getting back to our test, we can access it with a symbol.
+```ruby
+test_case = {
+  number: 4,
+  base: 2,
+  expected: '100'
+}
+
+test_case[:number] # => 4 
+test_case[:base] # => 2 
+test_case[:expected] # => '100' 
+```
+
+## Writing the test
+Let's make an array of hashes called `test_cases`.
+Well, one hash for now -- the same one as before.
+Let's make it print out how many tests it's running using string interpolation and `test_cases.count`, then have it loop through the tests using a block like
+```ruby
+test_cases.each do |test|
+
 end
+```
+Then, for each test let's using our `Converter.new(   ).to_base(   )` from before to convert it and compare it to the expected output.
+If they're different (which we can check with a statement like `unless a == b`) we should print out a message saying it failed on that test.
+I highly recommend that you try writing this on your own instead of pasting in the code below, but the code below is there if you really want it.
 
+```ruby
+test_cases = [
+    {
+        number: 4,
+        base: 2,
+        expected: '100'
+    }
+]
+
+puts "Running #{test_cases.count} tests"
+test_cases.each do |test|
+  output = Converter.new(test[:number]).to_base(test[:base])
+  unless output == test[:expected]
+    puts "Failed to convert #{test[:number]} to base #{test[:base]} (got #{output}, #{test[:expected]} expected)"
+  end
+end
+puts 'Tests complete'
+```
+
+## Running the tests
+Since we just had this in run.rb, we can use `ruby run.rb` to run it.
+```text
+Running 1 tests
+Tests complete
+```
+Looks like it worked!
+Let's add some more test cases.
+
+```ruby
 test_cases = [
     {
         number: 322,
@@ -507,22 +616,6 @@ test_cases = [
         expected: 'jm'
     }
 ]
+```
 
-puts "Running #{test_cases.count} tests"
-test_cases.each do |test|
-  output = Converter.new(test[:number]).to_base(test[:base])
-  unless output == test[:expected]
-    puts "Failed to convert #{test[:number]} to base #{test[:base]} (got #{output}, #{test[:expected]} expected)"
-  end
-end
-puts 'Tests complete'
-
-
-# str = "test_cases = [\n"
-# 100.times do
-#   base = (2..36).to_a.sample
-#   number = (1..1000).to_a.sample
-#   str << "{\nnumber: #{number},\nbase: #{base},\nexpected: '#{number.to_s base}'\n},\n"
-# end
-# str << "\n]"
-# puts str
+[We'll discuss the results of running this in the next section](ruby-07.md)
