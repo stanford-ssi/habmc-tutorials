@@ -5,3 +5,8 @@ Dammit Larry.
 
 Provided here are three mostly-discrete tutorials: one about Ruby, the programming language, another about Rails, the framework, and the final one about HABMC itself.
 Let's start with [the ruby one](ruby/ruby-01.md).
+
+Or you can access them from here
+- [Learning ruby](ruby/ruby-01.md)
+- [Learning rails](rails/rails-01.md)
+- [Learning HABMC](habmc/habmc-01.md)
