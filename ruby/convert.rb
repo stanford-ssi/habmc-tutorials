@@ -9,7 +9,7 @@ class Converter
 
     number = @number
 
-    max_decimal_place = (Math.log(number) / Math.log(base)).ceil
+    max_decimal_place = (Math.log(number) / Math.log(base)).floor
 
     converted = (0..max_decimal_place).reverse_each.map do |decimal_place|
       bit = 0
