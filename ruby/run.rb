@@ -511,6 +511,8 @@ test_cases = [
 puts "Running #{test_cases.count} tests"
 test_cases.each do |test|
   output = Converter.new(test[:number]).to_base(test[:base])
+  # output = test[:number].to_base test[:base]
+
   unless output == test[:expected]
     puts "Failed to convert #{test[:number]} to base #{test[:base]} (got #{output}, #{test[:expected]} expected)"
   end
