@@ -7,6 +7,11 @@ end
 
 test_cases = [
     {
+        number: 4,
+        base: 2,
+        expected: '100'
+    },
+    {
         number: 322,
         base: 16,
         expected: '142'
@@ -500,11 +505,6 @@ test_cases = [
         number: 43,
         base: 26,
         expected: '1h'
-    },
-    {
-        number: 478,
-        base: 24,
-        expected: 'jm'
     }
 ]
 

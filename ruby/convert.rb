@@ -22,6 +22,12 @@ class Converter
       bit
     end
 
+    converted.map! do |digit|
+      digit = ('a'..'z').to_a[digit - 10] if digit >= 10
+
+      digit
+    end
+
     converted.join
   end
 end
