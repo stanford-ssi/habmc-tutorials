@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transmissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Altitude</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Temperature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transmissions.each do |transmission| %>
+      <tr>
+        <td><%= transmission.altitude %></td>
+        <td><%= transmission.latitude %></td>
+        <td><%= transmission.longitude %></td>
+        <td><%= transmission.temperature %></td>
+        <td><%= link_to 'Show', transmission %></td>
+        <td><%= link_to 'Edit', edit_transmission_path(transmission) %></td>
+        <td><%= link_to 'Destroy', transmission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transmission', new_transmission_path %>

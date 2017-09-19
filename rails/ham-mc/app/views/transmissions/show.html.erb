@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Altitude:</strong>
+  <%= @transmission.altitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @transmission.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @transmission.longitude %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @transmission.temperature %>
+</p>
+
+<%= link_to 'Edit', edit_transmission_path(@transmission) %> |
+<%= link_to 'Back', transmissions_path %>
