@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'transmissions/last'
   post 'transmissions/create_random' => 'transmissions#create_random'
 
   resources :transmissions

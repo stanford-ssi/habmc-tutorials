@@ -1,6 +1,10 @@
 class TransmissionsController < ApplicationController
   before_action :set_transmission, only: [:show, :edit, :update, :destroy]
 
+  def last
+    render json: Transmission.order('created_at').last
+  end
+
   def create_random
     render json: Transmission.create_random
   end
