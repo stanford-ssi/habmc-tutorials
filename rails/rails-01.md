@@ -132,4 +132,4 @@ This is a good place to stick code you didn't write, in order to keep it separat
 For example, you might put a javascript library in here.
 
 
-Now run along to [Part 2]](rails-02.md)
+Now run along to [Part 2](rails-02.md)
