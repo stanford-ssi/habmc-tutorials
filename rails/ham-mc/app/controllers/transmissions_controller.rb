@@ -1,6 +1,10 @@
 class TransmissionsController < ApplicationController
   before_action :set_transmission, only: [:show, :edit, :update, :destroy]
 
+  def create_random
+    render json: Transmission.create_random
+  end
+
   # GET /transmissions
   # GET /transmissions.json
   def index
