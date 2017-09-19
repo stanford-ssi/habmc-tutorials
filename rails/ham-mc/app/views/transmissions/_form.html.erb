@@ -13,25 +13,25 @@
 
   <div class="field">
     <%= form.label :altitude %>
-    <%= form.text_field :altitude, id: :transmission_altitude %>
+    <%= form.text_field :altitude, id: :transmission_altitude, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :transmission_latitude %>
+    <%= form.text_field :latitude, id: :transmission_latitude, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :transmission_longitude %>
+    <%= form.text_field :longitude, id: :transmission_longitude, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :temperature %>
-    <%= form.text_field :temperature, id: :transmission_temperature %>
+    <%= form.text_field :temperature, id: :transmission_temperature, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class: 'btn btn-primary' %>
   </div>
 <% end %>
