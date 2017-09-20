@@ -68,4 +68,11 @@ end
 
 ```
 
+## Add it to git
+Let's commit this:
+```bash
+git add -A
+git commit -m 'Wrote tutorial messages controller'
+```
+
 Great! On to [Part 6](habmc-06.md)
