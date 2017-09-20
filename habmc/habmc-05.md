@@ -23,7 +23,7 @@ We only want to accept the content parameter, and we also want
 private
 
 def tutorial_message_params
-    params.require(:tutorial_message).permit(:content).tap do |parameters|
+    params.require(:tutorial_message).permit(:contents).tap do |parameters|
       parameters[:mission_id] = params[:mission_id]
     end
 end
@@ -59,7 +59,7 @@ class TutorialMessagesController < ApplicationController
   private
 
   def tutorial_message_params
-    params.require(:tutorial_message).permit(:content).tap do |parameters|
+    params.require(:tutorial_message).permit(:contents).tap do |parameters|
       parameters[:mission_id] = params[:mission_id]
     end
   end
