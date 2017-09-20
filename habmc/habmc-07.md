@@ -141,6 +141,7 @@ We finally have all we need to write the submit function:
 
 Test it out! 
 If it doesn't work, have a look at the javascript console and see if there are any errors.
+[Here's what my version looks like](https://github.com/KMarshland/habmc/blob/2d3db1d5e986ed7d6b1eb2c68ba06dbcb0509f0b/app/assets/javascripts/components/habmc/pages/tutorial_messages/tutorial_messages_input.js.jsx)
 
 ## Git ahead
 ```bash
