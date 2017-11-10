@@ -39,6 +39,11 @@ CMD fish
 ```
 You can see an explanation of what's going on by reading the comments in the [Dockerfile in this repo](Dockerfile)
 
+### It's not working -- what do I do?
+1. Make sure there's a file called `Dockerfile` -- with no extension!
+2. Make sure [Docker is installed](https://docs.docker.com/get-started/#setup) and you can run `docker run hello-world
+`
+3. Slack `@kai`
 
 ## Build the docker container
 
