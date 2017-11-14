@@ -8,6 +8,7 @@ I'm actually going to start with the tools we need in order to start programming
 This starts with a nice editor. 
 I recommend [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/), which has support for ruby, rails, javascript, docker, and pretty much every language/framework you can think of.
 Technically you're free to use another editor, but this whole thing will be easier and you're much more likely to have nice style if you use IntelliJ.
+Note that you should get IntelliJ **Ultimate** rather than the community edition.
 
 Have you downloaded it? Nice. The enterprise version is free for students, and you can use most of the defaults. 
 The plugins that will come in handy are for Ruby and Docker. 
