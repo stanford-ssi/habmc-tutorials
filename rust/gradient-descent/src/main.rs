@@ -1,3 +1,5 @@
+use std::io::{BufReader,BufRead};
+use std::fs::File;
 
 /*
  * Represents the equation y = ax^2 + bx + c
@@ -99,19 +101,54 @@ fn gradient_descent(equation : &Equation) -> Vec<f32> {
     return x;
 }
 
-fn main() {
-    // create an equation representing 2x^2 + x + 3
-    let equation = &HyperbolicParabaloid {
-        a: 2.0,
-        b: 1.0,
-        c: 2.0,
-        d: -8.0,
-        e: 9.0
-    };
+struct Datapoint {
+    data : Vec<f32>,
+    result : f32
+}
 
-    // assert its local minimum is really close to -0.25
-    let min = &gradient_descent(equation);
-    assert!((min[0] - (-0.25)).abs() < 0.01);
-    assert!((min[1] - (2.0)).abs() < 0.01);
-    println!("Success! Local minimum of {} is at {:?}", equation.evaluate(min), min)
+fn read_dataset(filename : &str) -> Vec<Datapoint> {
+    let mut datapoints : Vec<Datapoint> = vec![];
+
+    let file = File::open(filename).unwrap();
+    for line in BufReader::new(file).lines() {
+        let unwrapped_line = match line {
+            Ok(line) => line,
+            Err(_) => {
+                continue
+            }
+        };
+
+        let parts = unwrapped_line.split(": ").collect::<Vec<&str>>();
+
+        if parts.len() != 2 {
+            continue;
+        }
+
+        let data_part = parts[0].split(" ").collect::<Vec<&str>>();
+
+        let mut data : Vec<f32> = vec![];
+        for i in 0..data_part.len() {
+            data.push(data_part[i].parse().unwrap());
+        }
+
+        let result_part = parts[1];
+
+        let result : f32 = match result_part.parse() {
+            Ok(number) => number,
+            Err(_) => {
+                continue
+            }
+        };
+
+        datapoints.push(Datapoint {
+            data, result
+        })
+    }
+
+    return datapoints;
+}
+
+fn main() {
+    let train = read_dataset("./vote-train.txt");
+    println!("{:?}: {}", train[0].data, train[0].result)
 }
