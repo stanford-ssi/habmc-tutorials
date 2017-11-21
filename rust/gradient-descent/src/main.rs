@@ -27,11 +27,21 @@ fn gradient_descent(equation : &QuadraticEquation) -> f32 {
     // don't run this function forever
     let max_iterations = 1_000;
 
+    let max_error = 0.00001;
+
     let mut x : f32 = 0.0;
 
     for iteration in 0..max_iterations {
         let gradient = equation.derivative_at(x);
-        x -= step_size * gradient;
+        let new_x = x - step_size * gradient;
+
+        // check for convergence
+        if (x - new_x).abs() < max_error {
+            println!("Converged on iteration {}", iteration);
+            return new_x;
+        }
+
+        x = new_x;
     }
 
     return x;
