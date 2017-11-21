@@ -1,104 +1,62 @@
 use std::io::{BufReader,BufRead};
 use std::fs::File;
 
-/*
- * Represents the equation y = ax^2 + bx + c
- */
-struct QuadraticEquation {
-    a: f32,
-    b: f32,
-    c: f32
-}
-
-impl Equation for QuadraticEquation {
-
-    fn evaluate(&self, x : &Vec<f32>) -> f32 {
-        return self.a*x[0]*x[0] + self.b*x[0] + self.c;
-    }
-
-    fn gradient_at(&self, x : &Vec<f32>) -> Vec<f32> {
-        return vec![2.0*self.a*x[0] + self.b];
-    }
-
-    fn get_arity(&self) -> usize {
-        return 1;
-    }
-}
-
-/*
- * Represents the equation z = ax^2 + bx + cy^2 + dy + e
- */
-struct HyperbolicParabaloid {
-    a: f32,
-    b: f32,
-    c: f32,
-    d: f32,
-    e: f32
-}
-
-impl Equation for HyperbolicParabaloid {
-
-    fn evaluate(&self, x : &Vec<f32>) -> f32 {
-        return self.a*x[0]*x[0] + self.b*x[0] + self.c*x[1]*x[1] + self.d*x[1] + self.e;
-    }
-
-    fn gradient_at(&self, x : &Vec<f32>) -> Vec<f32> {
-        return vec![
-            2.0*self.a*x[0] + self.b,
-            2.0*self.c*x[1] + self.d
-        ];
-    }
-
-    fn get_arity(&self) -> usize {
-        return 2;
-    }
-}
-
-
-trait Equation {
-    fn evaluate(&self, x : &Vec<f32>) -> f32;
-
-    fn gradient_at(&self, x : &Vec<f32>) -> Vec<f32>;
-
-    fn get_arity(&self) -> usize;
-}
-
-fn gradient_descent(equation : &Equation) -> Vec<f32> {
+fn gradient_descent(training_data : &Vec<Datapoint>) -> Vec<f32> {
     // how quickly it moves. If this is too high, it will overshoot; too low, and it will be slow
     let step_size = 0.1;
 
     // don't run this function forever
     let max_iterations = 1_000;
 
-    let max_error = 0.00001;
+    let max_error = 0.1;
 
-    // initialize x to all zeros
-    let mut x : Vec<f32> = Vec::with_capacity(equation.get_arity());
-    for _ in 0..equation.get_arity() {
-        x.push(0.0);
+    // initialize weights to all zeros
+    let arity = training_data[0].data.len();
+    let mut weights : Vec<f32> = Vec::with_capacity(arity);
+    for _ in 0..arity {
+        weights.push(0.0);
     }
 
     for iteration in 0..max_iterations {
-        let gradient = equation.gradient_at(&x);
-        let mut new_x = Vec::with_capacity(equation.get_arity());
+
         let mut total_error = 0.0;
 
-        for i in 0..equation.get_arity() {
-            let delta : f32 = step_size*gradient[i];
-            total_error += delta.abs();
-            new_x.push(x[i] - delta);
+        for example in training_data {
+
+            // let's model error using hinge loss, so derivative is
+            // - y * x[i] when on hinge
+            // 0 otherwise
+
+            let mut dot_product = 0.0;
+            for i in 0..weights.len() {
+                dot_product += weights[i] * example.data[i];
+            }
+
+            let mut gradient : Vec<f32> = vec![];
+            for i in 0..arity {
+                if dot_product.abs() < 1.0 {
+                    gradient.push(
+                        -example.result * example.data[i]
+                    )
+                } else {
+                    gradient.push(0.0)
+                }
+            }
+
+            for i in 0..arity {
+                total_error += (step_size * gradient[i]).abs();
+                weights[i] -= step_size * gradient[i];
+            }
         }
 
         // check for convergence
         if total_error < max_error {
-            println!("Converged on iteration {}", iteration);
-            return new_x;
+            println!("Converged after {} iterations", iteration);
+            break;
         }
-
-        x = new_x;
     }
 
-    return x;
+    return weights;
 }
 
 struct Datapoint {
@@ -150,5 +108,25 @@ fn read_dataset(filename : &str) -> Vec<Datapoint> {
 
 fn main() {
     let train = read_dataset("./vote-train.txt");
-    println!("{:?}: {}", train[0].data, train[0].result)
+    let weights = gradient_descent(&train);
+
+    let test = read_dataset("./vote-test.txt");
+    let mut number_accurate = 0;
+
+    for example in &test {
+        let mut dot_product = 0.0;
+        for i in 0..weights.len() {
+            dot_product += weights[i] * example.data[i];
+        }
+
+        if (dot_product >= 0.0 && example.result >= 0.0) ||
+            (dot_product <= 0.0 && example.result <= 0.0) {
+            number_accurate += 1;
+        } else {
+            println!("Example was wrong (got {}, should be {})", dot_product, example.result);
+        }
+    }
+
+    println!("{}% accurate", 100.0*(number_accurate as f32)/(test.len() as f32));
+    println!("Best weights: {:?}", weights);
 }
