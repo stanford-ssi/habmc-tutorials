@@ -11,6 +11,7 @@ I chose Rust for a number of reasons:
 - It's designed to prevent memory leaks
 - Everything is thread safe, and we wanted the ability to massively parallelize our code.
 - I actually like the syntax
+- It integrates really easily with ruby
 
 Rust is still a young programming language, and there's a pretty steep learning curve. 
 I say that not to discourage you, but so you know what you're getting into: it's okay if you don't immediately understand everything.
