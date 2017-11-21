@@ -3,5 +3,8 @@ fn main() {
     let a = 5;
     let b = 2;
 
-    println!("{} + {} = {}", a, b, a + b);
+    let mut result = a + b;
+    result *= 2;
+
+    println!("Result is: {}", result);
 }
