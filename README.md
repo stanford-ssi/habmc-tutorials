@@ -10,3 +10,6 @@ Or you can access them from here
 - [Learning ruby](ruby/ruby-01.md)
 - [Learning rails](rails/rails-01.md)
 - [Learning HABMC](habmc/habmc-01.md)
+
+There's also the Rust tutorial, which is the language we use for the predictor.
+- [Learning Rust](rust/rust-01.md)
