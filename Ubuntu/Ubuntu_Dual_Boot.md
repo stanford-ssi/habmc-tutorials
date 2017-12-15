@@ -165,7 +165,7 @@ If you're on UEMI continue with this guide:
 
 #OI MATE, DON'T SHIP PLEASE
 
-[//]: #(Some viruses that are required to install Ubuntu)
+[//]: # (Some viruses that are required to install Ubuntu)
 
 [Ubuntu Desktop]: https://www.ubuntu.com/download/desktop
 [Rufus]: https://rufus.akeo.ie/
