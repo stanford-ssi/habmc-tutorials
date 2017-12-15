@@ -30,7 +30,7 @@ Now that you've decided to sacrifice your system to the dark gods, we can get on
 
 2. Run the .exe. From here,
 
-   * Select the appropriate USB drive[^flashdriverequirements] you want to use
+   * Select the appropriate <sup>[1](#flashdriverequirements)</sup> USB drive you want to use
    * Set **Partition scheme and target system type**
    * - For Windows 8, 8.1, or 10: GPT partition scheme for UEFI
    * - For Windows 7: MBR partition scheme for BIOS or UEFI
@@ -157,7 +157,7 @@ If you're on UEMI continue with this guide:
 
 
 
-[^flashdriverequirements]: If the program is not working, it may be your flash drive formatting. It must be in either FAT or NTFS. In this case, you will want to check either the NTFS Format Drive or Fat32 Format Drive boxes. **THIS WILL ERASE ANY FILES ON THE FLASH DRIVE, MAKE SURE TO BACK EVERYTHING UP JUST IN CASE**
+<a name="flashdriverequirements">1</a>: If the program is not working, it may be your flash drive formatting. It must be in either FAT or NTFS. In this case, you will want to check either the NTFS Format Drive or Fat32 Format Drive boxes. **THIS WILL ERASE ANY FILES ON THE FLASH DRIVE, MAKE SURE TO BACK EVERYTHING UP JUST IN CASE**
 
 
 
