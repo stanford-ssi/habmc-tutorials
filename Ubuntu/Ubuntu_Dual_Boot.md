@@ -80,7 +80,7 @@ As a quick aside, disk management will make your life wonderful. Never underesti
 
 
 
-###Giving The Boot To Safe Boot
+### Giving The Boot To Safe Boot
 
 As per [Microsoft][], this step carries the following warnings:
 
@@ -121,7 +121,9 @@ Now we need to check if your system runs off UEFI or Legacy/CRM/BIOS
 
    ![](https://i.imgur.com/ZVMCYme.png)
 
-2. If your version says Legacy, CRM, or BIOS, [you're ready to launch](#meeting-an-old-friend). Else, we have to configure the appropriate launch path to Ubuntu. Start by going back to the UEFI firmware menu [as done in the previous step](#giving-the-boot-to-safe-boot). From here, go to **File Browser Add Boot Option**>**USB Drive**>**EFI**>**BOOTx64.EFI**. After this, a dialog box asking for a file name will pop up, name it whatever you want and hit enter. After, switch the new boot option you added to be **Boot Option #1**. Finally, save changes and reset.
+2. If your version says Legacy, CRM, or BIOS, [you're ready to launch](#meeting-an-old-friend). 
+
+Else, we have to configure the appropriate launch path to Ubuntu. Start by going back to the UEFI firmware menu [as done in the previous step](#giving-the-boot-to-safe-boot). From here, go to **File Browser Add Boot Option**>**USB Drive**>**EFI**>**BOOTx64.EFI**. After this, a dialog box asking for a file name will pop up, name it whatever you want and hit enter. After, switch the new boot option you added to be **Boot Option #1**. Finally, save changes and reset.
 
    ![USB](https://i.imgur.com/oChcNz6.png)
 
