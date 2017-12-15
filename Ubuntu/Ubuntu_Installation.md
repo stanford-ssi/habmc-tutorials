@@ -71,7 +71,7 @@ Now that we have Ubuntu ready to install, it's time to go through the process of
 
 There are a few discrepancies between Mac terminal and the Ubuntu terminal that are worth mentioning since the HABMC guides are written from the perspective of Mac.
 
-1. **Ctrl+Shift+T** is the shortcut to open a terminal window. **Ctrl+Shift+V** is the shortcut to paste into the terminal, in every other program, it is **Ctrl+V** like Windows.
+1. **Ctrl+Alt+T** is the shortcut to open a terminal window. **Ctrl+Shift+V** is the shortcut to paste into the terminal, in every other program, it is **Ctrl+V** like Windows.
 
 2. The administrator privilege is run by  **sudo**. This is required for installing or updating any packages you have on Ubuntu. For example, running
 
