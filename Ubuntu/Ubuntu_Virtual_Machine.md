@@ -57,9 +57,9 @@ Switching over to the virtual box window, select the created virtual machine and
 
 For help setting up Ubuntu, [go to the next tutorial!][]
 
-### Oi mate, update me please. DON'T LET THIS SHIP
+
 
 [//]: # "Links to all the viruses used for the guide SHIT IS BAD, DON'T SHIP"
 [VM VirtualBox binaries]: <https://www.virtualbox.org/wiki/Downloads>
 [Ubuntu Desktop]: <https://www.ubuntu.com/download/desktop>
-[go to the next tutorial!]: <www.google.com>
+[go to the next tutorial!]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Installation.md>
