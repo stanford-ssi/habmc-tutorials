@@ -159,17 +159,11 @@ If you're on UEMI continue with this guide:
 
 
 
-
-
-
-
-#OI MATE, DON'T SHIP PLEASE
-
 [//]: # (Some viruses that are required to install Ubuntu)
 
 [Ubuntu Desktop]: https://www.ubuntu.com/download/desktop
 [Rufus]: https://rufus.akeo.ie/
 [Microsoft]: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot
 [this update]: https://support.microsoft.com/en-gb/help/2902864/update-removes-the-windows-8-1-secureboot-isn-t-configured-correctly-w	"Update rollup 2887595 for windows"
-[here]: www.google.com	"This will be the next portion of the Ubuntu guide"
+[here]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Installation.md	"This will be the next portion of the Ubuntu guide"
 
