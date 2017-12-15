@@ -87,12 +87,14 @@ There are a few discrepancies between Mac terminal and the Ubuntu terminal that 
 
 Once this is set up, your machine will initially boot Ubuntu, which in turn loads Grub. From the Grub menu you can launch into Ubuntu or Windows depending on which you prefer.
 
-# OI mate, don't ship me like this
+If you have a discrete graphics card (Nvidia users), we [need to configure some stuff][].
 
-With that over with, let's install [all the tools we need][]
+Otherwise, let's install [all the tools we need][].
 
 
 
-[//]: # "The lonely link used in this guide"
-[all the tools we need]: google.com/ "This will be the docker tools installation guide"
+[//]: # "The lonely links used in this guide"
+
+[need to configure some stuff]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Required_Programs.md
+[all the tools we need]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Required_Programs.md "This will be the docker tools installation guide"
 
