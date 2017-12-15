@@ -30,7 +30,7 @@ Now that you've decided to sacrifice your system to the dark gods, we can get on
 
 2. Run the .exe. From here,
 
-   * Select the appropriate USB drive you want to use
+   * Select the appropriate USB drive[^flashdriverequirements] you want to use
    * Set **Partition scheme and target system type**
    * - For Windows 8, 8.1, or 10: GPT partition scheme for UEFI
    * - For Windows 7: MBR partition scheme for BIOS or UEFI
