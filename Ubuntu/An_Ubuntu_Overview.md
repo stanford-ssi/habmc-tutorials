@@ -46,5 +46,5 @@ If you're unsure which to go with, the dual boot is superior in almost every asp
 * [Dual Boot Guide][]
 
 ### Oi mate, update me please. DON'T LET THIS SHIP
-[Virtual Machine Guide]: <https://google.com>
-[Dual Boot Guide]: <https://bing.com>
+[Virtual Machine Guide]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Virtual_Machine.md>
+[Dual Boot Guide]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Dual_Boot.md>
