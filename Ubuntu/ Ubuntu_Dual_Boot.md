@@ -157,7 +157,13 @@ If you're on UEMI continue with this guide:
 
 
 
-<a name="flashdriverequirements">1</a>: If the program is not working, it may be your flash drive formatting. It must be in either FAT or NTFS. In this case, you will want to check either the NTFS Format Drive or Fat32 Format Drive boxes. **THIS WILL ERASE ANY FILES ON THE FLASH DRIVE, MAKE SURE TO BACK EVERYTHING UP JUST IN CASE**
+
+
+
+
+
+
+<a name="flashdriverequirements">1</a>: If the program is not working, it may be your flash drive formatting. It must be in either FAT or NTFS. In this case, you will want to check either the NTFS Format Drive or Fat32 Format Drive boxes. **THIS WILL ERASE ANY FILES ON THE FLASH DRIVE, MAKE SURE TO BACK EVERYTHING UP JUST IN CASE** [Return](#ubuntu-iso-image)
 
 
 
