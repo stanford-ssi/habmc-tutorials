@@ -44,4 +44,8 @@ Once this is done running, simply type ```reboot``` and launch Ubuntu. Your GPU 
 
 Now [let's go on to installing the tools we need][]
 
-[let's go on to installing the tools we need]: <> "Next tool installation tutorial"
+
+
+[//]: # (A very lonely link)
+
+[let's go on to installing the tools we need]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Required_Programs.md "Next tool installation tutorial"
