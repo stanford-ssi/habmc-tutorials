@@ -38,9 +38,10 @@ Now that we have Ubuntu ready to install, it's time to go through the process of
 
    ![Root Partition](https://i.imgur.com/3qz2jb8.png)
 
-   After that, click **Install Now** and the installation process for Ubuntu should be continue.
+   For the **boot loader installation** location, select the base hard drive. It should be the complete name with no numbers, such as /dev/sva. After that, click **Install Now** and the installation process for Ubuntu should be continue.
 
    ![Install Now](https://i.imgur.com/RDlpBEG.png)
+   
 
 6. Now set your location for language, keyboard, and time settings.
 
@@ -82,6 +83,10 @@ There are a few discrepancies between Mac terminal and the Ubuntu terminal that 
 
 3. This function makes maintaining useful applications super easy, especially since our system will be 16.04 for a very long time. This insures stability and convenience, two very important parts of being a lazy programmer.
 
+# Launching
+
+Once this is set up, your machine will initially boot Ubuntu, which in turn loads Grub. From the Grub menu you can launch into Ubuntu or Windows depending on which you prefer.
+
 # OI mate, don't ship me like this
 
 With that over with, let's install [all the tools we need][]
@@ -89,5 +94,5 @@ With that over with, let's install [all the tools we need][]
 
 
 [//]: # "The lonely link used in this guide"
-[all the tools we need]: google.com/ "This will be the docker installation guide"
+[all the tools we need]: google.com/ "This will be the docker tools installation guide"
 
