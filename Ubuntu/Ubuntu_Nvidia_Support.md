@@ -10,6 +10,10 @@ So a few things are wonky with installing Ubuntu with discrete graphics cards, b
 
 This opens the location /etc/default/grub (where grub is located on install) with a text editor called gedit that comes with Ubuntu. The following screen should pop up, just find the line which says **GRUB_CMDLINE_LINUX="nomodeset”** simply delete **nomodeset** leaving **“”** in its place. Click save in the top right and close out of the window.
 
+***Optional Information*** Leaving it in **nomodeset** would boot using integrated graphics, which causes an infinite boot loop as the drivers for those graphics are hibernating in some dark, mysterious forest. This makes your computer grumpy because it just wants to get home after a long day of storing electrons, or something, and makes it throw a fit. Which in turn makes you angry because it keeps asking for you to log in, but you just tried logging in. Then you end up getting a divorce, and you lose everything you own.
+
+**TL;DR** It's a bad time
+
 ![grub menu](https://i.imgur.com/0O4MHrl.png)
 
 Now, in the terminal type:
