@@ -2,6 +2,7 @@ I lied, sorry.
 You see, I'm not actually going to start with the ruby programming language.
 I'm actually going to start with the tools we need in order to start programming in the ruby programming language.
 
+And if you're using Windows, [get over here](Ubuntu/ Ubuntu_Overview.md) before you hurt yourself.
 
 ## Install ALL the things
 
