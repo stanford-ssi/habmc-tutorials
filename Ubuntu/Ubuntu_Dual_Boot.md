@@ -26,7 +26,7 @@ Now that you've decided to sacrifice your system to the dark gods, we can get on
 
 ### Ubuntu ISO Image
 
-1. Download this [Rufus][]. Scroll down to the downloads tab and select the topmost option. **MAKE SURE TO BACK UP ANY FILES ON YOUR USB THAT YOU DON'T WANT TO LOSE**
+1. Download [Rufus][]. Scroll down to the downloads tab and select the topmost option. **MAKE SURE TO BACK UP ANY FILES ON YOUR USB THAT YOU DON'T WANT TO LOSE**
 
 2. Run the .exe. From here,
 
