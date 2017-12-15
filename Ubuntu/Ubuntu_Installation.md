@@ -95,6 +95,6 @@ Otherwise, let's install [all the tools we need][].
 
 [//]: # "The lonely links used in this guide"
 
-[need to configure some stuff]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Required_Programs.md
+[need to configure some stuff]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Nvidia_Support.md
 [all the tools we need]: https://github.com/stanford-ssi/habmc-tutorials/blob/master/Ubuntu/Ubuntu_Required_Programs.md "This will be the docker tools installation guide"
 
