@@ -11,8 +11,9 @@ Now, in your docker environment (which you got to in the previous step by runnin
 ```bash
 ruby run.rb
 ```
-
 Bonus points for guessing what that will do.
+
+**For Ubuntu Users:** Rejoice, for we are no longer using pure Ubuntu. We're now in some bastardised, nightmare version of it that docker conjured up. However, this means we no longer have to use the sudo command before every single thing we run. Keep in mind, however, that we have to go back to using the sudo command once we return to our proper root (the **/** directory) from the docker root.
 
 ## Functions 
 We have a serious problem: no overly convoluted story line to annoy you enough that you finish this tutorial out of spite.
