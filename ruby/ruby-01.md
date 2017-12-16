@@ -39,13 +39,15 @@ RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2
 
 CMD fish
 ```
-You can see an explanation of what's going on by reading the comments in the [Dockerfile in this repo](Dockerfile)
+You can see an explanation of what's going on by reading the comments in the [Dockerfile in this repo](Dockerfile).
+
+As a side note: this should prompt you to install a plug in to [support docker files][] and a plug in to [support ruby files][]. If not, you will have to [manually update your IntelliJ plugins][].
 
 ### It's not working -- what do I do?
 1. Make sure there's a file called `Dockerfile` -- with no extension!
 2. Make sure [Docker is installed](https://docs.docker.com/get-started/#setup) and you can run `docker run hello-world
 `
-3. Slack `@kai`
+3. Slack `@kai` or (especially for Ubuntu users) `@implyingicheck`
 
 ## Build the docker container
 
@@ -57,6 +59,8 @@ If you want to get more comfortable with the shell, I liked [this tutorial](http
 Run `docker build -t ruby-tutorial .`
 This builds the docker container (`-t ruby-tutorial` tags it with the name ruby-tutorial, and `.` just means build the current directory).
 This might take a long time to run the first time, but you only will need to run it once.
+
+**For Ubuntu Users Only:** Make sure to include sudo before the docker commands or they will not work
 
 ## Run the thing!
 ```bash
@@ -72,3 +76,9 @@ That mounts the local folder (try running `pwd` in your shell) to the `/home` di
 This has stretched on long enough. 
 [Let's go to the next part of the tutorial!](ruby-02.md)  
 
+
+[//]: # (Links to clean up a paragraph of the code)
+
+[support docker files]: <https://plugins.jetbrains.com/plugin/7724-docker-integration> "Docker plugin"
+[support ruby files]: <https://plugins.jetbrains.com/plugin/1293-ruby> "Ruby plugin"
+[manually update your IntelliJ plugins]: <https://www.jetbrains.com/help/idea/installing-a-plugin-from-the-disk.html>
