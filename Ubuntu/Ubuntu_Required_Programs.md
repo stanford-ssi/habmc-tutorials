@@ -108,7 +108,7 @@ If anything is strange, breaking, doesn't quite work, or you just want to chat, 
 
 [//]: # (Some viruses needed for the guide)
 
-[the official docker documentation]: <https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#make-the-dockerfile>
+[the official docker documentation]: <https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/>
 [the IntelliJ website]: <https://account.jetbrains.com/login>
 [their website]: <https://www.jetbrains.com/idea/download/#section=linux>
-[in the first tutorial]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/ruby/ruby-01.md#build-the-docker-container>
+[in the first tutorial]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/ruby/ruby-01.md#make-the-dockerfile>
