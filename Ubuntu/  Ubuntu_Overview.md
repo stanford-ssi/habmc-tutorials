@@ -42,6 +42,8 @@ Cons:
 
 If you're unsure which to go with, the dual boot is superior in almost every aspect aside from user-friendliness in set up. However, this guide is here to help you with that, so no need to worry.
 
+Also, if you get stuck at any point in this tutorial or everything you hold dear starts to break, Slack `@implyingicheck` for help!
+
 * [Virtual Machine Guide][]
 * [Dual Boot Guide][]
 
