@@ -19,6 +19,12 @@ Docker is going to be our way around having to worry about getting everything in
 It's a container system -- a bunch of commands that set up something reliable and consistent on your computer -- which means that instead of wasting our time with 15 things, we only need to worry about one. 
 You can install it from [docker.com](https://www.docker.com/docker-mac)
 
+### Ubuntu and Me
+If you are not running Ubuntu, you can ignore the following paragraph.
+
+Throughout the tutorial you'll find small troubleshooting tips for Ubuntu to hopefully help you on the learning curve, as it is quite steep. For now, it doesn't really matter how well you understand what Ubuntu is doing (I sure as hell don't 98% of the time). 
+
+With that said, I would recommend messing around with Ubuntu and seeing what it has to offer. If you want a safe environment where you can break everything, simply [set up a virtual machine](../Ubuntu/%20Ubuntu_Virtual_Machine.md) and go ham. They can always be reset to their original state and save the current state upon exiting if you select that option. You'll find my contact information further into the guide (around the first spot you might have trouble), don't hesitate to hit me up with questions.
 
 ## Make the Dockerfile
 
