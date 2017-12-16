@@ -102,6 +102,8 @@ This is a lot more straight forward but doesn't teach you as much about Ubuntu. 
 # Time to Pop the Champagne
 That's everything we need for the tutorials. It's bittersweet seeing you guys graduate, but the first time installing Ubuntu is a long process. Hopefully this guide made it a little shorter, and prevented you from having to Google things for a cumulative totale of 30ish hours :mildscorn:. It's bittersweet seeing you graduate, but I'm sure you'll go on to do great things for HABMC and SSI. Hope to see you soon [in the first tutorial][]!
 
+If anything is strange, breaking, doesn't quite work, or you just want to chat, just Slack me (Hector Amador) ```@implyingicheck```
+
 
 
 [//]: # (Some viruses needed for the guide)
@@ -109,4 +111,4 @@ That's everything we need for the tutorials. It's bittersweet seeing you guys gr
 [the official docker documentation]: <https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#set-up-the-repository>
 [the IntelliJ website]: <https://account.jetbrains.com/login>
 [their website]: <https://www.jetbrains.com/idea/download/#section=linux>
-[in the first tutorial]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/ruby/ruby-01.md>
+[in the first tutorial]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/ruby/ruby-01.md#build-the-docker-container>
