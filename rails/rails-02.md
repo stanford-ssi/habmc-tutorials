@@ -1,5 +1,7 @@
 From here-on out, every command should be run from the `ham-mc` directory, and just in your normal shell.
 
+**For Ubuntu Users**: Because of how Docker interacts with Ubuntu, the files we created earlier in the tutorial aren't readily accessible when non-rooted. Here is [a quick run down](../Ubuntu/Using_Ubuntu.md) on commands that will be useful in the following section, because Ubuntu is weird.
+
 ## Setting up Docker
 
 We could create another Dockerfile, but it's high time we learned Docker Compose.
