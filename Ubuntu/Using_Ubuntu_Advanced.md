@@ -8,7 +8,7 @@ If you have proper access to a file, the easiest way to create a new file is sim
 
 ![Example Right Click](https://i.imgur.com/EmvfTEB.png)
 
-However, things get a bit tricker when files are read-only or were created using root (sudo). Thankfully, reating a file using the terminal is made simple using the `touch` command. Open up the location of where you want to create the file and [open that location in a terminal](). Then, use the command
+However, things get a bit tricker when files are read-only or were created using root (sudo). Thankfully, reating a file using the terminal is made simple using the `touch` command. Open up the location of where you want to create the file and open that location in a terminal. Then, use the command
 
 ```bash
 sudo touch "file_name"."extension"
@@ -21,7 +21,7 @@ As an example, I created two files in a folder called **Example Folder** to show
 
 * **README.txt** can be opened and edited without root access (sudo) being used. This is often the safest way to create files as most programs do not default to asking for root access.
 
-* **SUDOREADME.txt** has a small lock on the file icon, this signifies that it is read-only. For our purposes, read-only roughly means that opening the files would require you to use the terminal, which we'll [cover here](#editing-file).
+* **SUDOREADME.txt** has a small lock on the file icon, this signifies that it is read-only. For our purposes, read-only roughly means that opening the files would require you to use the terminal, which we'll [cover here](#editing-files).
 
 ### Editing Files
 
@@ -39,7 +39,7 @@ Trying to do the same thing on our **SUDOREADME.txt**, however, doesn't quite wo
 
 ![Error Message](https://i.imgur.com/Sjjw44f.png)
 
-This brings us into the world of root access and how Ubuntu is such a safe system. If you want more information [click here](#ubuntu-root-access). Otherwise, here's the solution:
+This brings us into the world of root access and how Ubuntu is such a safe system. If you want more information on root access, [click here](#ubuntu-root-access). Otherwise, here's the solution:
 
 If you have a read-only file, things will have to be done through the terminal. Using the files we created in the [last part](#creating-files). We'll open the **.txt** with a preinstalled program called **gedit**. Think of it like Notepad in Windows, except you can open any file type and edit the text associated with it (which can be a bunch of weird symbols if the document is not a text document).
 
