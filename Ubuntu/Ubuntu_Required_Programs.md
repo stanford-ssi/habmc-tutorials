@@ -58,6 +58,20 @@ and the following should pop up in your terminal.
 
 ![Docker Is Good](https://i.imgur.com/lhk84Ap.png)
 
+### Docker Compose
+
+As a disclaimer, this program has to be installed after downloading Docker. However, it is slightly easier to download than Docker itself. This will be version 1.18.0, it is compatible with the tutorials, however I would recommend downloading the most recent version by following [the instructions here][]. Just click on the **Linux** tab under the **Install Compose** heading.
+
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+```
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Typing in the command ```docker-compose --version``` should return version 1.18.0 if everything was installed properly.
+
+
 ### IntelliJ
 This is where things get slightly more difficult, but it's good exposure to the file types we will be using in Ubuntu. IntelliJ is the holy grail of IDEs (integrated development environments) in terms of features, but the best part is that it's ***free for students*** It doesn't get much spicier than that. (I'm looking at you, matlab). Simply make an account on [the IntelliJ website][] and verify your email. Once you have the program installed, it will prompt you for a login.
 
@@ -112,3 +126,4 @@ If anything is strange, breaking, doesn't quite work, just Slack me (Hector Amad
 [the IntelliJ website]: <https://account.jetbrains.com/login>
 [their website]: <https://www.jetbrains.com/idea/download/#section=linux>
 [in the first tutorial]: <https://github.com/stanford-ssi/habmc-tutorials/blob/master/ruby/ruby-01.md#ubuntu-and-me>
+[instructions here]: <https://docs.docker.com/compose/install/> "The docker compose install steps"
