@@ -1,6 +1,8 @@
 Dudley has a problem: his site looks like garbage.
 Let's change that.
 
+**For Ubuntu Users:** Before we change it, however, let's [let you in on a little secret](rails-04-Ubuntu.md).
+
 ## Adding bootstrap
 Bootstrap is a css library.
 CSS stands for Cascading Style Sheets, and is what makes websites pretty; if you wanted to turn a header green, for instance, you could do that with CSS.
@@ -20,6 +22,8 @@ Once it's done, you can restart the servers with
 ```bash
 docker-compose up
 ```
+
+**For Ubuntu Users:** Is your server closing out? [Try this fix}(rails-04-Ubuntu.md#server-is-already-running-error)
 
 Next, we require bootstrap in the actual css.
 Rename `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss`, which let's us use SASS.
