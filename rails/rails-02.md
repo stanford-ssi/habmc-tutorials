@@ -1,6 +1,6 @@
 From here-on out, every command should be run from the `ham-mc` directory, and just in your normal shell.
 
-**For Ubuntu Users**: Because of how Docker interacts with Ubuntu, the files we created earlier in the tutorial aren't readily accessible when non-rooted. Here is [a quick run down](../Ubuntu/Using_Ubuntu_Advanced.md) on commands that will be useful in the following section, because Ubuntu is weird.
+**For Ubuntu Users**: Because of how Docker interacts with Ubuntu, the files we created earlier in the tutorial aren't readily accessible when non-rooted. Due to that, we'll have to follow [our own process](rails-02-Ubuntu.md) in order to set the rails server up.
 
 ## Setting up Docker
 
