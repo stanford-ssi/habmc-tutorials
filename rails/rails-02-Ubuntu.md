@@ -2,7 +2,7 @@
 
 Here is [a quick run down](../Ubuntu/Using_Ubuntu_Advanced.md) on commands that will be useful in the following section. If you want to know how these commands work instead of just going through the process, I would recommend reading that guide. Otherwise, let's start:
 
-At this stage, we should have used our last ruby instance to ```gem install rails``` and then used ```rails new ham-mc``` to create a folder called **ham-mc** with the rails starter pack set up.
+At this stage, we should have used our last ruby instance to ```gem install rails``` and then used ```rails new ham-mc``` to create a folder called **ham-mc** with the rails starter pack set up. Due to us creating the folder within a instance, we are not treated as the original authors of the folder. Because of that, the file ends up being **read-only** so we need to use the terminal in order to edit it.
 
 The **ham-mc** folder should look like:
 
@@ -12,7 +12,7 @@ The **ham-mc** folder should look like:
 
 We already installed a neat program called Docker Composer earlier as a required program. Although the installation process is different, [this part of the guide](rails-02.md#setting-up-docker) provides a good overview of the program.
 
-cd into the folder that contains all the rails files (in this case **ham-mc**, then we'll run
+cd into the folder that contains all the rails files (in this case **ham-mc**), then we'll run
 
 ```bash
 sudo touch Dockerfile
