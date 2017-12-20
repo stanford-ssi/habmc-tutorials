@@ -27,7 +27,7 @@ services:
 
 This tells it to have one docker service running, app, that gets built from the local directory.
 It will mount the local directory, which means it sees the file changes you make on your computer, and it maps your port 3000 to the port 3000 in the app.
-It also starts it with the command `rails s`, which starts the rails server.
+It also starts it with the command `rails s`, which starts the rails server. ([Return to the Ubuntu Tutorial](rails-02-Ubuntu.md#setting-up-docker-compose))
 
 ### New Dockerfile
 Just like last time, we need to make a Dockerfile so that it knows how to build the project.
