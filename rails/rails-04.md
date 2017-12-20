@@ -23,7 +23,7 @@ Once it's done, you can restart the servers with
 docker-compose up
 ```
 
-**For Ubuntu Users:** Is your server closing out? [Try this fix}(rails-04-Ubuntu.md#server-is-already-running-error)
+**For Ubuntu Users:** Is your server closing out? [Try this fix](rails-04-Ubuntu.md#server-is-already-running-error)
 
 Next, we require bootstrap in the actual css.
 Rename `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss`, which let's us use SASS.
