@@ -10,7 +10,7 @@ The **ham-mc** folder should look like:
 
 ### Setting Up Docker-Compose
 
-We already installed a neat program called Docker Compose that you can read up on [here](rails-02.md#setting-up-docker) if you want to better understand it.
+We already installed a neat program called Docker Composer earlier as a required program. Although the installation process is different, [this part of the guide](rails-02.md#setting-up-docker) provides a good overview of the program.
 
 cd into the folder that contains all the rails files (in this case **ham-mc**, then we'll run
 
