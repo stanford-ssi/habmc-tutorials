@@ -8,10 +8,11 @@ The **ham-mc** folder should look like:
 
 ![ham-mc Folder](https://i.imgur.com/7ub6f8U.png)
 
+### Setting Up Docker-Compose
 
-### Setting Up Docker
+We already installed a neat program called Docker Compose that you can read up on [here](rails-02.md#setting-up-docker) if you want to better understand it.
 
-cd here form the terminal, then we'll run
+cd into the folder that contains all the rails files (in this case **ham-mc**, then we'll run
 
 ```bash
 sudo touch Dockerfile
@@ -44,7 +45,17 @@ services:
       - 3000:3000
 ```
 
-After saving the folder, run
+Save and exit from gedit.
+
+### Setting Up the Dockerfile
+
+We'll want to run
+
+```bash
+sudo gedit Dockerfile
+```
+
+and change its contents to
 
 ```dockerfile
 # base it off of the ruby 2.4 iage from dockerhub, which installs ruby and gets that set up
