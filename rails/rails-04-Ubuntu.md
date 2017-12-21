@@ -9,7 +9,7 @@ So now you might be thinking, "how could I ever trust this asshole again?" and t
 
 Some time in your Ubuntu career, you'll stumble upon read-only files. The biggest reason files are read-only is for security. While you could use the method we did above, it can some times put your computer at-risk or break the program that you are working with because of permission inconsistencies. Now, you have the tools to work around read-only files and hopefully are starting to become more comfortable using the terminal.
 
-Before you think about how BS that is, [let's get back to installing bootstrap](rails-04.md#adding-bootstrap).
+We'll have to relaunch the server and download the gems again, which should take a few seconds. Unless you're in the middle of the Mexican desert, using your phone as a mobile hotspot :skeleton:. But that part will be done in [the rest of the tutorial](rails-04.md#adding-bootstrap).
 
 ### Server Is Already Running Error
 
