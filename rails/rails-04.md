@@ -69,7 +69,7 @@ Inside that, we `yield` to the content of the view.
 
 ## Adding a header
 Let's also give it a header, for when we add more pages.
-Right about the container, put the following code:
+Right above the container, put the following code:
 ```html
 <nav class="navbar navbar-default navbar-fixed">
   <div class="container">
