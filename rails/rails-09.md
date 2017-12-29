@@ -109,7 +109,7 @@ or
 ```ruby
 get 'transmissions/last' => 'transmissions#last'
 ```
-in config/routes.rb
+in config/routes.rb. Make sure to add this above the `resources`. Otherwise, the JS request will go with the `resources` route which will then launch a command other than the `last` function we just made.
 
 In app/controllers/transmissions_controller.rb, you should have something like
 ```ruby
