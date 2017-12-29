@@ -30,7 +30,11 @@ Let's add a button to the home page in app/views/static/home.html.erb
 
 ## Adding jQuery
 JQuery is a javascript library that makes interacting with elements a lot easier.
-Install it by adding 
+Install it by adding the following to your gemfile:
+
+```ruby
+gem 'jquery-rails'
+```
 
 And by adding to app/assets/javascripts/application.js, right under `//= require turbolinks`
 ```js
