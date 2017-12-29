@@ -2,7 +2,7 @@ Let's make a button the user can click to call `Transmission.create_random`.
 
 ## Controller
 We can start with the controller action.
-In app/controllers/transmissions_controller, let's make a new action called `create_random`.
+In app/controllers/transmissions_controller, let's make a new action called `create_random`. Make sure it is above the **private** methods or it will not be accessible by our button.
 It should render the transmission that was just created.
 This is dead simple to make:
 ```ruby
@@ -42,6 +42,10 @@ And by adding to app/assets/javascripts/application.js, right under `//= require
 //= require jquery_ujs
 ```
 
+Then simply rebuild your website using
+```bash
+docker-compose up --build
+```
 ## Making a request on click
 We need to wait for the document to load.
 At that point, we need to listen for a click, then do something.
