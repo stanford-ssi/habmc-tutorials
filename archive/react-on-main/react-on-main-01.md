@@ -1,7 +1,7 @@
 
 # Adding React to the main site
 This isn't a normal tutorial. 
-First of all, the code isn't tested, but more importantly, it describes a task that has already been completed. 
+First of all, the code isn't tested, but more importantly, it describes a task that we want in our codebase. 
 That means that by the time you're reading this, it might already have been completed -- but by that time hopefully there will be a real React tutorial anyway.
 
 This tutorial explains how to add React to the main site, and rewrite a few simple components.
