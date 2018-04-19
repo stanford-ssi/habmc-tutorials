@@ -32,7 +32,7 @@ This should give you something like this:
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default class Leader extends React.Component {
+export default class Leader extends React.PureComponent {
 
     render() {
         return (
@@ -83,7 +83,7 @@ Our solution looked like this:
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default class Leader extends React.Component {
+export default class Leader extends React.PureComponent {
 
     render() {
         const imageBase = 'https://s3-us-west-1.amazonaws.com/habmc/assets/leadership_pictures/';
@@ -143,4 +143,4 @@ They also, mysteriously, have this property called `key` set.
 Whenever you are trying to render an array of elements, they have to have this key property set to something unique (in this case, just the index within the array).
 This is how React knows which one is which.
 
-I'll finish writing this tutorial later, but at this point you should be capable of turning the leadership page into a React App. 
+Continue on to [the next step](react-on-main-06.md) to make the LeadershipTable component accept an array.
