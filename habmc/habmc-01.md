@@ -24,6 +24,11 @@ Then run the install script
 docker-compose run app bash install.sh
 ```
 
+If you're running Ubuntu, you'll want to run the following script:
+```bash
+./ubuntuInstall.sh
+```
+
 Now try starting the servers
 ```bash
 docker-compose up
