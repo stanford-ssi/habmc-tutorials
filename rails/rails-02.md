@@ -33,7 +33,7 @@ It also starts it with the command `rails s`, which starts the rails server. ([R
 Just like last time, we need to make a Dockerfile so that it knows how to build the project.
 Let's make it look like
 ```dockerfile
-# base it off of the ruby 2.4 iage from dockerhub, which installs ruby and gets that set up
+# base it off of the ruby 2.4 image from dockerhub, which installs ruby and gets that set up
 FROM ruby:2.4
 
 # install fish for this OS
@@ -46,7 +46,12 @@ RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2
 # do everything out of the folder /root
 WORKDIR /home
 
+# install node
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+    && apt-get install -y nodejs
+
 # install all libraries
+RUN gem install bundler
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
 RUN bundle install
@@ -54,6 +59,9 @@ RUN bundle install
 # start the fish shell running
 CMD fish
 ```
+
+## If it gives you an error about ruby version...
+Update the first line of the `Gemfile` to match the one it says you have.
 
 ## Running the server
 Run `docker-compose up --build`. 
