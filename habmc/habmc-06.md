@@ -76,7 +76,7 @@ We're saying:
 - It doesn't have any properties
 
 ## Make it able to be displayed
-Frontend routing is done in app/assets/javascripts/components/habmc/app.js.jsx.
+Frontend routing is done in app/javascript/habmc/app.js.jsx.
 You can see a big set of configuration:
 ```jsx harmony
 const pages = {
