@@ -45,7 +45,7 @@ When Page is rendered, it will create HTML that looks like
 ```
 
 ## Making our own Page
-Brace yourself for a ridiculously long path: app/assets/javascripts/components/habmc/pages/tutorial_messages_page.js.jsx
+Brace yourself for a ridiculously long path: app/javascript/habmc/pages/tutorial_messages_page.js.jsx
 That's the file in which we should create a new page.
 
 Let's make it a skeleton for now:
