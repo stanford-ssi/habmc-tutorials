@@ -1,4 +1,4 @@
-Let's make a new folder, app/assets/javascripts/components/habmc/pages/tutorial_messages, and move tutorial_messages_page.js.jsx into it.
+Let's make a new folder, app/javascript/habmc/pages/tutorial_messages, and move tutorial_messages_page.js.jsx into it.
 It's fine to have a page file on its own, but as soon as we start making it more complex than one component, we should be doing it in a folder. 
 And guess what -- we're making a couple new components.
 
