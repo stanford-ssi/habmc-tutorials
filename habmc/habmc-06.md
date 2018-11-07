@@ -50,6 +50,8 @@ That's the file in which we should create a new page.
 
 Let's make it a skeleton for now:
 ```jsx harmony
+import React from 'react'
+
 export default class TutorialMessagesPage extends React.Component {
 
     shouldComponentUpdate(nextProps, nextState){
