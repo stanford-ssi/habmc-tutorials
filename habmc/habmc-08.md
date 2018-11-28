@@ -49,15 +49,15 @@ before_action :requires_student
 This makes sure the user trying to do any of the actions is a student.
 
 ## Loading in messages from the frontend
-Open up app/assets/javascripts/habmc_common/api_interface.js.jsx and add a line in `initialize`
+Open up app/javascript/habmc/interfaces/session_layer/habmc_data_interface.js.jsx and add a line in `initialize`
 ```jsx harmony
-this.refreshTutorialMessages();
+HABMCDataInterface.refreshTutorialMessages();
 ```
 
 We also need to write that function it's calling.
 
 ```jsx harmony
-refreshTutorialMessages(){
+static refreshTutorialMessages(){
     const self = this;
 
     $.ajax({
@@ -69,18 +69,18 @@ refreshTutorialMessages(){
             });
         }
     })
-},
+}
 ```
 
 Oh, and remember reducers?
-We need to create one in app/assets/javascripts/habmc_common/reducers/tutorial_messages_reducer.js.jsx
+We need to create one in app/javascript/habmc/reducers/tutorial_messages_reducer.js.jsx
 ```jsx harmony
 function TutorialMessagesReducer(state, action) {
     return modelReducer('tutorial_message')(state, action);
 }
 ```
 
-And add it to app/assets/javascripts/components/habmc/store.js.jsx
+And add it to app/javascript/habmc/store.js.jsx
 ```jsx harmony
 tutorialMessages: TutorialMessagesReducer,
 ```
