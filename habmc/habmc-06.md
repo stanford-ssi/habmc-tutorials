@@ -93,11 +93,13 @@ tutorial_messages: TutorialMessagesPage
 ```
 (Don't forget to add a comma at the end of the previous line)
 
+You'll also need to import it at the top of the file with `import TutorialMessagesPage './pages/tutorial_messages_page.js';`
+
 Now if you go to [http://localhost:3000/#tutorial_messages](http://localhost:3000/#tutorial_messages), you'll see it say hi.
 
 ## Link to it in the sidebar
 We also want to see it in the sidebar.
-We need to edit the massive config variable in app/assets/javascripts/components/habmc/layout/sidebar/sidebar.js.jsx.
+We need to edit the massive config variable in app/javascript/habmc/layout/sidebar/sidebar.js.jsx.
 Right under the thing that says `text: "Communications", heading: true`, add
 ```js
 {
