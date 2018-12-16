@@ -61,7 +61,7 @@ In `processMessage`, in the variable `actions`, we should add another function.
 When messages of type `tutorial_message` come in, we should dispatch the info to the store.
 ```jsx harmony
 tutorial_message: function () {
-    self.store.dispatch({
+    store.dispatch({
         type: 'PUT_TUTORIAL_MESSAGE',
         tutorial_message: data.info
     });
