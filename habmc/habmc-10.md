@@ -34,6 +34,21 @@ docker-compose run app rubocop
 It should say something like `215 files inspected, no offenses detected`.
 If there were any offenses, you'll need to fix them by hand. 
 
+## Checking style with eslint
+Just like there's a style checker for the ruby code, there's a style checker for javascript. Just like rubocop, it can autofix things for you.
+
+To run it _without_ autofixing:
+```bash
+docker-compose run app yarn lint-no-fix
+```
+
+And to autofix errors:
+```bash
+docker-compose run app yarn lint
+```
+
+Letting the style checkers autofix errors is safe. You don't have to worry about it causing bugs, because it won't: if it's not sure about something, it won't autofix it.
+
 Finally, add your changes to git
 ```bash
 git add -A
