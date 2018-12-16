@@ -123,7 +123,7 @@ Our data is there.
 
 ## Git
 There's a lot of stuff that went on here.
-If you're not sure you wrote the code correctly, feel free to check it against [https://github.com/KMarshland/habmc/tree/tutorial-kai-marshland](https://github.com/KMarshland/habmc/tree/tutorial-kai-marshland).
+If you're not sure you wrote the code correctly, feel free to slack @kai. 
 
 ```bash
 git add -A
