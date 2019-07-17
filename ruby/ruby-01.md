@@ -37,9 +37,8 @@ Make the contents of it look like the [Dockerfile in this folder](Dockerfile):
 FROM ruby:2.4
 
 WORKDIR /home
-RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_8.0/ /' >> /etc/apt/sources.list.d/fish.list && \
-    apt-get update && \
-    wget -qO - http://download.opensuse.org/repositories/shells:fish:release:2/Debian_8.0/Release.key | apt-key add - && \
+RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_9.0/ /' | tee -a /etc/apt/sources.list && \
+     wget -q -O - https://download.opensuse.org/repositories/shells:fish:release:2/Debian_9.0/Release.key | apt-key add -  && \
     apt-get update && \
     apt-get install -y fish
 
